@@ -2,9 +2,10 @@ $accent: #243f4d;
 $link: #436372;
 $default: #7b7b7b;
 $title: #191919;
+$btn: #a3bbc8;
 
 %dmsans-400{
-  font-family: 'DMSans-Regular' , sans-serif;
+  font-family: 'DMSans-Regular';
   font-weight: 400;
 }
 %dmsans-500{
@@ -20,10 +21,18 @@ $title: #191919;
   font-weight: 700;
 }
 %rubik-400{
-  font-family: 'Rubik-Regular' , sans-serif;
+  font-family: 'Rubik-Regular';
   font-weight: 400;
 }
-%rubik-700{
-  font-family: 'Rubik-Bold' , sans-serif;
-  font-weight: 700;
+%rubik-500{
+  font-family: 'Rubik-Medium';
+  font-weight: 500;
+}
+%btn{
+  background-color: $btn;
+  color: #fff;
+  @extend %rubik-500;
+  font-size: 15px;
+  line-height: 15px;
+  display: inline-block;
 }

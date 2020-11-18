@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -20,7 +21,7 @@
   }
   &__list-link{
     font-size: 15px;
-    @extend %rubik-700;
+    @extend %rubik-500;
     color: $link;
     line-height: 15px;
     transition: all .3s;
@@ -88,9 +89,6 @@
     background-color: #a3bbc8;
     margin-left: 15px;
   }
-}
-.footer{
-
 }
 .footer-top{
   display: flex;
@@ -208,6 +206,85 @@
       line-height: 18px;
       color: $default;
     }
+  }
+}
+.top-slider{
+  background-image: url(../images/ellipse.png);
+  background-repeat: no-repeat;
+  background-size: 630px;
+  background-position: 990px center;
+  
+  background-color: #fcd7b6;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  position: relative;
+  &__item{
+
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title{
+    max-width: 500px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $accent;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  &__text{
+    max-width: 370px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: $link;
+  }
+  &__link{
+    @extend %btn;
+    padding: 25px 100px 25px 30px;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      background-image: url(../images/arrow.svg);
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 10px;
+      width: 22px;
+    }
+  }
+  .slick-dots{
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -170px;
+    li{
+      padding: 0 6px;
+      button{
+        padding: 0;
+        font-size: 11px;
+        line-height: 11px;
+        width: 29px;
+        height: 29px;
+        @extend %rubik-500;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+      }
+      &.slick-active{
+        button{
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  &__img{
+    padding-top: 40px;
   }
 }
 
