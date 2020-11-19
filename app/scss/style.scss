@@ -287,6 +287,50 @@
     padding-top: 40px;
   }
 }
+.info{
+  background-color: #fef7f0;
+  padding: 40px 0;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+  &__img{
+    padding-bottom: 20px;
+  }
+  &__item-content{
+    margin-left: 30px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+  &__text{
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #585858;
+  }
+}
+.info-img-wrapper{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/ellipse-info.svg);
+    height: 20px;
+    width: 20px;
+    bottom: 10px;
+    right: -5px;
+    z-index: 5;
+  }
+}
 
 
 @import 'media';
