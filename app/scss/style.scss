@@ -331,6 +331,49 @@
     z-index: 5;
   }
 }
+.productsweek{
+  padding: 30px 0 190px;
+  &__title{
+    margin-bottom: 35px;
+  }
+  &__filter{
+    margin-bottom: 80px;
+  }
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 270px;
+    padding: 30px 40px 40px 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+  &__img{
+    display: block;
+    object-fit: contain;
+    max-height: 220px;
+  }
+  &__item__title{
+    margin-top: auto;
+    @extend %dmsans-500;
+    color: #243f4d;
+  }
+  &__price{
+    margin-top: 15px;
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+  &__hover-link{
+    display: none;
+  }
+}
 
 
 @import 'media';
