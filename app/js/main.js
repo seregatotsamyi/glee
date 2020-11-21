@@ -5,6 +5,8 @@ $(function(){
     autoplay: true,
     fade: true,
   });
+ 
+    
 
 
   var mixer = mixitup('.productsweek__inner');
