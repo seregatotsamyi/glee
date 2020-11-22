@@ -416,6 +416,70 @@
     background-color: #a3bbc8;
   }
 }
+.info-product{
+  margin-bottom: 60px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    background-color: #feefe2;
+    max-width: 870px;
+    width: 100%;
+    padding-left: 400px;
+    padding-right: 150px;
+    position: relative;
+    height: 390px;
+  }
+  &__img-inner{
+    display: block;
+    position: absolute;
+    left: 140px;
+    bottom: 90px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    color: $accent;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 25px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__link{
+    display: inline-block;
+    color: #436372;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 20px 90px 20px 20px;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+    @extend %rubik-500;
+    border-radius: 8px;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 9px;
+      width: 22px;
+      transform: translateY(-50%);
+      right: 19px;
+      background-image: url('../images/arrow-blue.svg');
+    }
+  }
+}
 
 
 @import 'media';
