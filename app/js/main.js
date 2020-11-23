@@ -9,5 +9,14 @@ $(function(){
     
 
 
-  var mixer = mixitup('.productsweek__inner');
+  var mixer = mixitup('.productsweek__inner' , {
+    selectors: {
+      control: '.filter__prod-btn'
+    }
+  });
+  var mixer1 = mixitup('.newdesign__inner', {
+    selectors: {
+      control: '.filter__prod-new-btn'
+    }
+  });
 });
