@@ -537,5 +537,32 @@
 .mixitup-control-active{
   color: #191919;
 }
+.video-popup{
+  background-color: #e6e6e6;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 60px;
+  &__popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__img-inner{
+    background-image: url(../images/icons/playvideodecor.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 @import 'media';
