@@ -867,5 +867,127 @@
     margin-bottom: 60px;
   }
 }
+.about-info{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__content{
+    padding-left: 45px;
+    color: $accent;
+    max-width: 555px;
+  }
+  &__experieance{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+  }
+  &__experieance-col{
+    @extend %rubik-500;
+    font-size: 140px;
+    line-height: 130px;
+    color: $btn;
+  }
+  &__experieance-items{
+    padding-left: 30px;
+  }
+  &__experieance-item{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    letter-spacing: -0.3px;
+  }
+  &__discr__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
+  &__discr__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    margin-bottom: 50px;
+  }
+  &__static{
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+    border-top: 2px solid #e6eaf0;
+  }
+  &__discr__item{
+    padding: 10px 24px 16px 0;
+    @extend %dmsans-700;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    border-right: 1px solid #e6eaf0;
+    &:last-child{
+      padding-right: 0;
+      border-right: none;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__discr__item-content{
+    padding-left: 15px;
+  }
+  &__discr-col{
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+  }
+  &__discr__word{
+    font-size: 16px;
+    line-height: 17px;
+    color: #4c4c4c;
+    letter-spacing: -0.5px;
+  }
+}
+.about-line-info{
+  padding: 80px 0;
+  background-color: #fcd7b6;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    max-width: 169px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    @extend %dmsans-700;
+    color: $accent;
+  }
+  &__img-inner{
+    margin-bottom: 22px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url(../images/about/icons/ellipse.png);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      top: 28px;
+      right: -12px;
+      opacity: .9;
+    }
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.8px;
+  }
+}
 
 @import 'media';
