@@ -1246,4 +1246,41 @@
     position: absolute;
   }
 }
+.recent-products{
+  &__inner{
+    padding-top: 10px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__img-link{
+
+  }
+  &__img{
+
+  }
+  &__content{
+
+  }
+  &__title-link{
+    display: block;
+  }
+  &__title{
+    @extend %rubik-400;
+    font-size: 14px;
+    color: #333333;
+    line-height: 18px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 15px;
+    color: #333333;
+    line-height: 16px;
+  }
+}
+.star{
+  
+}
 @import 'media';

@@ -20,6 +20,14 @@ $(function(){
     },
     });
 
+    $(".star").rateYo({
+      starWidth: "11px",
+      normalFill: "#d6d6d6",
+      ratedFill: "#ffcc00",
+      readOnly: true,
+
+    });
+
 
   var mixer = mixitup('.productsweek__inner' , {
     selectors: {
