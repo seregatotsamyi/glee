@@ -1256,16 +1256,26 @@
     margin-bottom: 25px;
   }
   &__img-link{
-
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #f2f2f2;
+    padding: 3px;
   }
   &__img{
-
+    object-fit: cover;
   }
   &__content{
-
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   &__title-link{
     display: block;
+    margin-bottom: 6px;
   }
   &__title{
     @extend %rubik-400;
@@ -1281,6 +1291,79 @@
   }
 }
 .star{
-  
+  padding: 0;
+  margin-bottom: 8px;
+}
+.shop-content{
+  width: 100%;
+  &__filter{
+    border: 2px solid #a3bbc8;
+    padding: 5px 10px 5px 15px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__filter-buttons{
+    font-size: 16px;
+    @extend %rubik-400;
+    line-height: 18px;
+    color: #a3bbc8;
+    display: flex;
+    align-items: center;
+
+  }
+  &__filter-btn{
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 15px;
+    line-height: 0px;
+    cursor: pointer;
+    &.shop-content__filter-btn--active svg{
+      path{
+        fill: #3e5763;
+      }
+    }
+  }
+}
+.jq-selectbox {
+  vertical-align: top;
+}
+.jq-selectbox__select {
+  height: 28px;
+  margin-left: 30px;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  font: 14px/32px Arial, sans-serif;
+  color: #a3bbc8;
+  @extend %rubik-400;
+  text-shadow: none;
+  &:hover{
+    background: transparent;
+  }
+}
+.jq-selectbox__dropdown {
+  border-radius: 0;
+  box-shadow: none; 
+  @extend %rubik-400;
+}
+.jq-selectbox__trigger {
+  border-left: none;
+}
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url(../images/icons/selected-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 @import 'media';

@@ -1,4 +1,13 @@
 $(function(){
+
+  $('.shop-content__filter-btn').on('click', function(){
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active'); 
+  });
+
+  $('.select-style').styler();
+
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -25,7 +34,7 @@ $(function(){
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00",
       readOnly: true,
-
+      spacing: "8px",
     });
 
 
