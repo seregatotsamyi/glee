@@ -5,6 +5,13 @@ $(function(){
     $(this).addClass('shop-content__filter-btn--active'); 
   });
 
+  $('.button-list').on('click', function(){
+    $('.productsweek__item').addClass('productsweek__item--list');
+  });
+  $('.button-grid').on('click', function(){
+    $('.productsweek__item').removeClass('productsweek__item--list');
+  });
+
   $('.select-style').styler();
 
 
@@ -29,6 +36,13 @@ $(function(){
     },
     });
 
+    $(".productsweek__star").rateYo({
+      starWidth: "18px",
+      normalFill: "#d6d6d6",
+      ratedFill: "#ffcc00",
+      readOnly: true,
+      spacing: "12px",
+    });
     $(".star").rateYo({
       starWidth: "11px",
       normalFill: "#d6d6d6",
@@ -36,6 +50,7 @@ $(function(){
       readOnly: true,
       spacing: "8px",
     });
+
 
 
   var mixer = mixitup('.productsweek__inner' , {

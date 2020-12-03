@@ -355,6 +355,89 @@
   }
   &__item{
     width: 270px;
+    &.productsweek__item--list{
+      min-width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      flex-direction: row;
+      align-items: center;
+      height: 500px;
+      text-align: left;
+      .productsweek__img__inner{
+        width: 370px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+      .productsweek__img{
+        max-height: 100%;
+        width: 100%;
+      }
+      .productsweek__item__title{
+        margin-bottom: 25px;
+        font-size: 40px;
+        line-height: 46px;
+      }
+      .productsweek__price{
+        margin-top: 35px;
+        font-size: 30px;
+        line-height: 34px;
+        color: #333333;
+        margin-bottom: 35px;
+      }
+      .productsweek__link-serch{
+        display: none;
+        position: absolute;
+      }
+      .productsweek__hover-link{
+        position: static;
+        display: flex;
+        opacity: 1;
+        justify-content: flex-start;
+        
+      }
+      .productsweek__link-shop{
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        margin-left: 0;
+        border-radius: 0;
+        background-color: #a3bbc8;
+        svg path{
+          fill: #fff;
+        }
+        &:hover svg path{
+          fill: #fff;
+        }
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+      .productsweek__star{
+        display: block;
+      }
+      .productsweek__link-heart{
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        margin-left: 10px;
+        border-radius: 0;
+        &:hover{
+          background-color: #a3bbc8;
+        }
+        &:hover svg path{
+          fill: #fff;
+        }
+      }
+      .productsweek__text{
+        display: block;
+        max-width: 430px;
+        @extend %rubik-400;
+        font-size: 16px;
+        color: #243f4d;
+        line-height: 18px;
+        margin-bottom: 40px;
+      }
+      
+    }
     padding: 30px 40px 40px 40px;
     text-align: center;
     font-size: 16px;
@@ -406,6 +489,12 @@
   }
   &__hover-link a + a{
     margin-left: 15px;
+  }
+  &__star{
+    display: none;
+  }
+  &__text{
+    display: none;
   }
   &__link-serch,
   &__link-heart,
@@ -1096,7 +1185,7 @@
   
 }
 .shop{
-  padding: 120px 0;
+  padding: 120px 0 80px 0;
   &__inner{
     display: flex;
   }
@@ -1296,6 +1385,7 @@
 }
 .shop-content{
   width: 100%;
+  padding-left: 35px;
   &__filter{
     border: 2px solid #a3bbc8;
     padding: 5px 10px 5px 15px;
@@ -1325,6 +1415,14 @@
       path{
         fill: #3e5763;
       }
+    }
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .productsweek__item{
+      margin-bottom: 40px;
     }
   }
 }
