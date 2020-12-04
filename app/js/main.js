@@ -2,6 +2,7 @@ $(function(){
 
   $('.shop-content__filter-btn').on('click', function(){
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $('.pagination').toggleClass('pagination--active');
     $(this).addClass('shop-content__filter-btn--active'); 
   });
 
