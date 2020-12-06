@@ -1755,6 +1755,149 @@
     }
   }
 }
+.filter-search{
+  margin-bottom: 55px;
+  &__form{
+    display: flex;
+  }
+  &__input{
+    border: 1px solid #ebf1f3;
+    display: inline-block;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0 58px 0 10px;
+    height: 43px;
+  }
+  &__btn{
+    background-color: #edf1f4;
+    border-radius: 4px;
+    border: 1px solid #ebf1f3;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    width: 48px;
+    margin-left: -46px;
+  }
+}
+.blog-page{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 830px;
+    margin-right: 65px;
+  }
+  &__item{
+    margin-bottom: 50px;
+  }
+  &__aside{
+    max-width: 270px;
+  }
+  &__img{
+    position: relative;
+  }
+  &__item-box{
+    @extend %rubik-400;
+  }
+  &__item-link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 275px;
+    padding: 0 20px;
+    justify-content: space-between;
+    margin-top: -70px;
+    background-color: #a3bbc8;
+    margin-bottom: 40px;
+    &__date,
+    &__author{
+      color: #fff;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      @extend %rubik-400;
+    }
+  }
+  &__item-title{
+    color: #333333;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  &__item-text{
+    color: #243f4d;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    margin-bottom: 30px;
+  }
+  &__item-more{
+    display: inline-block;
+    color: #a3bbc8;
+    border: 1px solid #a3bbc8;
+    padding: 20px 80px 20px 20px;
+    font-size: 15px;
+    line-height: 18px;
+    @extend %dmsans-700;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 9px;
+      width: 22px;
+      background-image: url(../images/icons/aroow-blog.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.pagination-blog{
+  padding: 0;
+  justify-content: start;
+  margin-top: 80px;
+}
+.recent-blog{
+  &__item{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__img-link{
+    margin-right: 20px;
+    height: 70px;
+    min-width: 70px;
+    display: inline-block;
+  }
+  &__img{
+    object-fit: cover;
+  }
+  &__title-link{
+    display: block;
+  }
+  &__title{
+    font-size: 14px;
+    @extend %rubik-400;
+    line-height: 20px;
+    color: #333;
+  }
+  &__text{
+    color: #9a9a9a;
+    font-size: 12px;
+    @extend %rubik-400;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+}
+
 
  
 
