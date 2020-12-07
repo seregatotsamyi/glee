@@ -1801,29 +1801,34 @@
   }
   &__img{
     position: relative;
+    z-index: 2;
+    display: block;
+    margin-bottom: 40px;
   }
   &__item-box{
     @extend %rubik-400;
+    position: relative;
   }
   &__item-link{
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 70px;
-    width: 275px;
-    padding: 0 20px;
-    justify-content: space-between;
-    margin-top: -70px;
+    position: absolute;
+    display: inline-block;
+    padding: 20px 25px;
+    top: -110px;
+    left: 0;
+    z-index: 5;
     background-color: #a3bbc8;
-    margin-bottom: 40px;
     &__date,
     &__author{
       color: #fff;
       font-size: 12px;
       line-height: 14px;
       text-transform: uppercase;
+      display: inline-block;
       @extend %rubik-400;
     }
+  }
+  &__item-link__author{
+    margin-left: 30px;
   }
   &__item-title{
     color: #333333;
