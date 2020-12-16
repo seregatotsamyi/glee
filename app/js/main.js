@@ -104,4 +104,6 @@ $(function(){
       control: '.filter__prod-new-btn'
     }
   });
+
+
 });
