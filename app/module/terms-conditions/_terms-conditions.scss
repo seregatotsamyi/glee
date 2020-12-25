@@ -1,0 +1,30 @@
+.terms-conditions{
+  padding: 120px 0 10px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $accent;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+  .terms-conditions__list{
+    margin-bottom: 70px;
+    list-style-type: decimal-leading-zero;
+    @extend %rubik-400;
+    color: $accent;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 32px;
+  }
+  &__item{
+    margin-bottom: 15px;
+    letter-spacing: -0.4px;
+  }
+  &__text{
+    @extend %rubik-400;
+    color: $accent;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+}

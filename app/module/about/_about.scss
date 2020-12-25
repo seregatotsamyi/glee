@@ -1,0 +1,228 @@
+.about-info{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__content{
+    padding-left: 45px;
+    color: $accent;
+    max-width: 555px;
+  }
+  &__experieance{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+  }
+  &__experieance-col{
+    @extend %rubik-500;
+    font-size: 140px;
+    line-height: 130px;
+    color: $btn;
+  }
+  &__experieance-items{
+    padding-left: 30px;
+  }
+  &__experieance-item{
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    letter-spacing: -0.3px;
+  }
+  &__discr__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
+  &__discr__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    margin-bottom: 50px;
+  }
+  &__static{
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+    border-top: 2px solid #e6eaf0;
+  }
+  &__discr__item{
+    padding: 10px 24px 16px 0;
+    @extend %dmsans-700;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    border-right: 1px solid #e6eaf0;
+    &:last-child{
+      padding-right: 0;
+      border-right: none;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__discr__item-content{
+    padding-left: 15px;
+  }
+  &__discr-col{
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+  }
+  &__discr__word{
+    font-size: 16px;
+    line-height: 17px;
+    color: #4c4c4c;
+    letter-spacing: -0.5px;
+  }
+}
+.about-line-info{
+  padding: 80px 0;
+  background-color: #fcd7b6;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    max-width: 169px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    @extend %dmsans-700;
+    color: $accent;
+  }
+  &__img-inner{
+    margin-bottom: 22px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url(../images/about/icons/ellipse.png);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      top: 28px;
+      right: -12px;
+      opacity: .9;
+    }
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.8px;
+  }
+}
+.about-team{
+  padding: 120px 0 50px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 300px;
+    color: $accent;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    font-size: 16px;
+    @extend %rubik-400;
+    letter-spacing: -0.1px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  }
+  &__link{
+    padding: 20px 60px 20px 20px;
+    background-color: $btn;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    @extend %poppins-700;
+    line-height: 18px;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all .3s;
+    &:after{
+      content: "";
+      position: absolute;
+      background-image: url(../images/about/icons/arrow.png);
+      width: 15px;
+      height: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 22px;
+    }
+    &:hover{
+      transform: translateX(5px);
+    }
+  }
+  &__images{
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+  &__img{
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  &__info{
+    padding: 30px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 325px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+    z-index: 5;
+    margin-top: -50px;
+  }
+  &__people-img{
+    display: block;
+  }
+  &__name{
+    @extend %dmsans-700;
+    font-size: 22px;
+    color: #436372;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  &__work{
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #565872;
+    line-height: 18px;
+  }
+  &__links{
+    display: flex;
+    max-width: 90px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__people-link{
+    height: 40px;
+    width: 40px;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
