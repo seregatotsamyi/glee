@@ -116,3 +116,30 @@
     }
   }
 }
+@media (max-width: 900px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 650px){
+  .footer-top{
+    justify-content: flex-start;
+    &__contact{
+      width: 100%;
+    }
+  }
+  .footer-bottom{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+    &__copy{
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+}
