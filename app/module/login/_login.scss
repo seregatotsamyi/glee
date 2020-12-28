@@ -1,0 +1,84 @@
+.modal{
+  padding-top: 120px;
+  max-width: 470px;
+  margin: 0 auto 120px;
+  &__label{
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $link;
+    letter-spacing: -0.4px;
+    line-height: 16px;
+    margin-bottom: 25px;
+    display: block;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    padding: 0 15px;
+    height: 60px;
+    margin-top: 15px;
+  }
+  &__btn{
+    display: block;
+    margin-top: 35px;
+    background-color: $btn;
+    border: none;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fffefe;
+    padding: 20px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 2px solid #f6f6f6;
+    &-label{
+      @extend %rubik-400;
+      font-size: 14px;
+      color: $link;
+      letter-spacing: -0.4px;
+      line-height: 16px;
+      display: block;
+    }
+  }
+  &__link{
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $link;
+    letter-spacing: -0.4px;
+    line-height: 16px;
+  }
+  &__info{
+    &-link{
+      display: block;
+      @extend %rubik-500;
+      color: $accent;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 22px 0;
+      text-align: center;
+      border: 2px solid $btn;
+      transition: all .3s;
+      &:hover{
+        background-color: $btn;
+        color: #fffefe;
+      }
+    }
+  }
+  &__text{
+    padding-top: 33px;
+    text-align: center;
+    @extend %rubik-400;
+    font-size: 14px;
+    color: $link;
+    letter-spacing: -0.4px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+}

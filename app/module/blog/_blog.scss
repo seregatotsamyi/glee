@@ -1,0 +1,109 @@
+.blog{ 
+  background: linear-gradient(180deg, #fff 393px, #fef7f0 0%);
+  &__titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+  &__title-up{
+    padding: 0;
+  }
+  &__titles-link{
+    @extend %dmsans-700;
+    color: #262626;
+    font-size: 16px;
+    line-height: 1;
+    padding-right: 25px;
+    position: relative;
+    transition: all .3s;
+    &:hover{
+      border-bottom: 1px solid#262626;
+      transform: translateX(-5px);
+    }
+    &::after{
+      content: "";
+      background-image: url(../images/icons/arrow-blog.svg);
+      height: 12px;
+      width: 6px;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 3px;
+      position: absolute;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 370px;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.03);
+    }
+  }
+  &__item__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__img{
+    display: block;
+  }
+  &__content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+  }
+  &__title{
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #262626;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+  }
+  &__info{
+    display: flex;
+    padding-top: 22px;
+    @extend %rubik-400;
+    font-size: 12px;
+    color: #222933;
+    text-transform: uppercase;
+    line-height: 1;
+    border-top: 1px solid #e0e0e0;
+  }
+  &__date{
+    margin-left: 28px;
+  }
+  &__author{
+    margin-left: 46px;
+  }
+  &__news-text{
+    @extend %poppins-700;
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+    background-color: $btn;
+    position: absolute;
+    text-transform: uppercase;
+    padding: 10px 35px;
+    border-radius: 20px;
+    top: -18px;
+    left: 30px;
+    display: none;
+  }
+  &__item__link.blog__news{
+    .blog__news-text{
+      display: inline-block;
+    }
+  }
+}
