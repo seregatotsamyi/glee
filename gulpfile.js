@@ -5,7 +5,6 @@ const autoprefixer          = require('gulp-autoprefixer');
 const uglify                = require('gulp-uglify');
 const imagemin              = require('gulp-imagemin');
 const rename                = require('gulp-rename');
-const nunjucksRender        = require('gulp-nunjucks-render');
 const del                   = require('del');
 const browserSync           = require('browser-sync').create();
 
@@ -19,12 +18,6 @@ function browsersync() {
   })
 }
 
-function nunjucks(){
-  return src('app/*.njk')
-    .pipe(nunjucksRender())
-    .pipe(dest('app'))
-    .pipe(browserSync.stream())
-} 
 
 function styles() {
   return src('app/scss/*.scss')
@@ -49,7 +42,6 @@ function scripts (){
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-    
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -89,7 +81,6 @@ function cleanDist(){
 
 function watching(){
   watch(['app/**/*.scss'], styles);
-  watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -99,8 +90,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
-exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching);
